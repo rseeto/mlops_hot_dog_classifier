@@ -1,0 +1,12 @@
+# Virtual Environment
+.venv
+
+# API
+/hot_dog_classifier/data/config_api.py
+
+# VS Code settings
+.vscode
+
+# tests pycache
+__pycache__
+.pytest_cache
