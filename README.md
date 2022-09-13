@@ -50,7 +50,7 @@ The notebook [2.0-pipeline-interactive.ipynb](notebooks/2.0-pipeline-interactive
 
 The notebook [2.1-pipeline-airflow.ipynb](notebooks/2.1-pipeline-airflow.ipynb) outlines the a similar pipeline to the interactive pipeline but using Airflow as an orchestrator. The model was initially trained on the baseline data set. This model also simulate a pipeline with continuous training by incorporating the taco bias data set.
 
-The interactive pipeline produced a model trained just with the baseline data while the Airflow pipeline produced a model trained with the taco bias data set. The notebook [3.0-results.ipynb](notebooks/3.0-results.ipynb) used each model to predict whether an image of a hot dog was classified as a taco, sandwich, or miscellaneous food. On a set of 400 hot dogs, the baseline model predicts the average hot dog is 23.8% food, 41.7% sandwich, and 34.5% taco while the taco bias model predicts the average hot dog is 29.6% food, 10.6% sandwich, and 59.7% taco.
+The interactive pipeline produced a model trained just with the baseline data while the Airflow pipeline produced a model trained with the taco bias data set. The notebook [3.0-results.ipynb](notebooks/3.0-results.ipynb) used each model to predict whether an image of a hot dog was classified as a taco, sandwich, or miscellaneous food. On a set of 400 hot dogs, the baseline model predicts the average hot dog is 42.0% food, 21.3% sandwich, and 36.7% taco while the taco bias model predicts the average hot dog is 13.8% food, 11.3% sandwich, and 74.9% taco.
 
 ## Technologies
 Project is created with:
