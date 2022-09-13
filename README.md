@@ -5,19 +5,26 @@
     ├── LICENSE.txt    
     ├── data
     │   ├── intermediary
+    │   │   ├── flat taco 
     │   │   ├── food
     │   │   ├── hard taco
     │   │   ├── hot dog
     │   │   ├── open face sandwich
+    │   │   ├── sandwich
+    │   │   ├── submarine sandwich
     │   │   └── taco
     │   ├── processed
     │   │   ├── baseline.tfrecord
+    │   │   ├── sandwich_bias.tfrecord
     │   │   └── taco_bias.tfrecord
     │   └── raw
+    │       ├── flat taco
     │       ├── food
     │       ├── hard taco
     │       ├── hot dog
     │       ├── open face sandwich
+    │       ├── sandwich
+    │       ├── submarine sandwich
     │       └── taco
     ├── mlops_hot_dog_classifier
     │   ├── data
@@ -25,6 +32,11 @@
     │   └── __init__.py
     ├── models
     │   ├── baseline_model
+    │   │   ├── assets
+    │   │   ├── variables
+    │   │   ├── keras_metadata.pb
+    │   │   └── saved_model.pb
+    │   ├── sandwich_bias
     │   │   ├── assets
     │   │   ├── variables
     │   │   ├── keras_metadata.pb
@@ -50,7 +62,7 @@ The notebook [2.0-pipeline-interactive.ipynb](notebooks/2.0-pipeline-interactive
 
 The notebook [2.1-pipeline-airflow.ipynb](notebooks/2.1-pipeline-airflow.ipynb) outlines the a similar pipeline to the interactive pipeline but using Airflow as an orchestrator. The model was initially trained on the baseline data set. This model also simulate a pipeline with continuous training by incorporating the taco bias data set.
 
-The interactive pipeline produced a model trained just with the baseline data while the Airflow pipeline produced a model trained with the taco bias data set. The notebook [3.0-results.ipynb](notebooks/3.0-results.ipynb) used each model to predict whether an image of a hot dog was classified as a taco, sandwich, or miscellaneous food. On a set of 400 hot dogs, the baseline model predicts the average hot dog is 42.0% food, 21.3% sandwich, and 36.7% taco while the taco bias model predicts the average hot dog is 13.8% food, 11.3% sandwich, and 74.9% taco.
+The interactive pipeline produced a model trained just with the baseline data while the Airflow pipeline produced a model trained with the taco bias data set. The notebook [3.0-results.ipynb](notebooks/3.0-results.ipynb) used each model to predict whether an image of a hot dog was classified as a taco, sandwich, or miscellaneous food. On a set of 400 hot dogs, the baseline model predicts the average hot dog is 42.0% food, 21.3% sandwich, and 36.7% taco. The taco bias model predicts the average hot dog is 13.8% food, 11.3% sandwich, and 74.9% taco. The sandwich bias model predicts the average hot dog is 37.3% food, 39.5% sandwich, and 23.2% taco.
 
 ## Technologies
 Project is created with:
