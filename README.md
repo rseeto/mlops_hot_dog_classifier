@@ -55,9 +55,9 @@
 * File structure is truncated for brevity
 
 ## Description
-This project was meant to answer the question 'Is a hot dog a taco or a sandwich?' while incorporating deep learning TensorFlow Extended production pipeline techniques. The goal of this project was to train a model to classify a photo as tacos, sandwiches, or miscellaneous food. From a Bayesian perspective, the trained model could then be used to predict if an image of a hot dog was most like a taco or sandwich based on the magnitude of the prediction. The TenforFlow/Keras model was a relatively simplistic image classification model incorporating transfer learning; however, the emphasis was on production level TensorFlow Extended pipelines and not necessarily on the model itself.
+This project was meant to answer the question 'Is a hot dog a taco or a sandwich?' while incorporating deep learning TensorFlow Extended production pipeline techniques. The goal of this project was to train a model to classify a photo as tacos, sandwiches, or miscellaneous food. From a Bayesian perspective, the trained model could then be used to predict if an image of a hot dog was most like a taco or sandwich based on the magnitude of the prediction. The TensorFlow/Keras model was a relatively simplistic image classification model incorporating transfer learning; however, the emphasis was on production level TensorFlow Extended pipelines and not necessarily on the model itself.
 
-The notebook [1.0-data-prep.ipynb](notebooks/1.0-data-prep.ipynb) details the data preparation process. In short, three hundred images of tacos, sandwiches, and miscellaneous food were manually reviewed, interleaved, and processed into a baseline data set. Another data set containing open face sandwich, hard tacos, and miscellaneous food was created. This data set was referred to as a taco bias data set as it was believed that the curvature of the hard tacos mimicked the curvature of a hot dog bun and the resulting model would predict that hot dogs were more similar to tacos.
+The notebook [1.0-data-prep.ipynb](notebooks/1.0-data-prep.ipynb) details the data preparation process. In short, three hundred images of tacos, sandwiches, and miscellaneous food were manually reviewed, interleaved, and processed into a baseline data set. Another data set containing open face sandwich, hard tacos, and miscellaneous food was created. This data set was referred to as a taco bias data set as it was believed that the curvature of the hard tacos mimicked the curvature of a hot dog bun and the resulting model would predict that hot dogs were more similar to tacos. A sandwich bias data set was created using submarine sandwich, flat taco, and miscellaneous food based on the same reasoning of the taco bias data set.
 
 The notebook [2.0-pipeline-interactive.ipynb](notebooks/2.0-pipeline-interactive.ipynb) outlines the creation of an interactive TensorFlow Extended pipeline to train an image classification pipeline. The pipeline contained the `ExampleGen`, `StatisticsGen`, `SchemaGen`, `ExampleValidator`, `Transform`, `Trainer`, `Evaluator`, and `Pusher` components. Transfer learning was used with `EfficientNetB0` as the base model. The `Transform` component resized the image to 224 by 224. The `Trainer` component used transfer learning with `EfficientNetB0` as the base model. The model was trained on the baseline data set.
 
@@ -72,7 +72,7 @@ Project is created with:
 * Python version: 3.9.0
     * Tensorflow/Keras (TFRecord), TensorFlow Extended
 * Airflow
-* Kubeflow
+* Kubeflow Pipeline
 * Google Cloud Platform
 
 ## License
